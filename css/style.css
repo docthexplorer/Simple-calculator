@@ -1,0 +1,163 @@
+:root {
+  --body: #ffffff;
+  --buttonColor: #f2f7ff;
+  --screen: #fafafa;
+  --calc: #ecf2ff;
+  --ce: #d71313;
+  --ac: #43dde6;
+  --eq: #0d1282;
+  --spread: #d1d1d1;
+}
+
+body {
+  background-color: var(--body);
+  text-align: center;
+}
+
+h1 {
+  margin: 20px auto;
+  color: var(--eq);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 0 5px var(--spread);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.container * {
+  border-radius: 5px;
+}
+
+.calc {
+  background-color: var(--calc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  box-shadow: 5px 5px 7px var(--spread);
+}
+
+.display {
+  height: 100px;
+  width: 500px;
+}
+
+#screen {
+  background-color: var(--screen);
+  border: none;
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 10px var(--spread),
+    inset -2px -2px 10px var(--spread);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 50px;
+  height: 100%;
+  text-align: right;
+  width: 100%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding-bottom: 30px;
+  width: 470px;
+}
+
+.buttons div {
+  width: 70px;
+  height: 50px;
+}
+
+.btn {
+  background-color: var(--buttonColor);
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px var(--spread);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+}
+
+.asterik,
+.divide,
+.plus,
+.minus,
+.eq,
+.root {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.pi {
+  font-family: "East Sea Dokdo", cursive;
+}
+
+.ce {
+  background-color: var(--ac);
+}
+
+.ac {
+  background-color: var(--ce);
+}
+
+.eq {
+  background-color: var(--eq);
+}
+
+.ce,
+.ac,
+.eq {
+  color: var(--screen);
+}
+
+.pressed {
+  background-color: var(--body);
+  box-shadow: 0 0 20px var(--buttonColor);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    margin: 30px auto 0 auto;
+  }
+
+  .calc {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .display {
+    height: 70px;
+    width: 320px;
+  }
+
+  #screen {
+    font-size: 30px;
+  }
+
+  .buttons {
+    gap: 10px;
+    padding-bottom: 10px;
+    width: 290px;
+  }
+
+  .buttons div {
+    width: 40px;
+    height: 35px;
+  }
+
+  .btn {
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+  }
+}
